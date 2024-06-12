@@ -31,7 +31,7 @@
 <body>
     <div class="container">
         <div class="form-container">
-            <h2 class="text-center mb-4">Register User Biasa</h2>
+            <h2 class="text-center mb-4">Register Sebagai Pengguna</h2>
             <form action="{{ route('register.user') }}" method="POST">
                 @csrf
                 <div class="form-group">
@@ -50,7 +50,10 @@
                     <label for="password_confirmation">Konfirmasi Password</label>
                     <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+                <div class="text-center mt-3">
+                    <a href="{{ route('login') }}" class="btn btn-link">Sudah punya akun?</a>
+                </div>
             </form>
         </div>
     </div>
@@ -58,7 +61,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Add any custom JavaScript here
         });
     </script>
 </body>

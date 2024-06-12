@@ -8,28 +8,46 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
-            
+            background: url({{asset('bg/bg.mp4')}});
+
         }
 
         .container {
+            background-color: rgba(255, 255, 255, 0.6);
             margin-top: 50px;
+            margin-bottom: 50px;
+            max-width: 400px;
+            backdrop-filter: blur(10px); Apply the blur effect
         }
 
         .form-container {
-            background-color: #fff;
+            border-color: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+
+
         }
 
         .form-group label {
             font-weight: bold;
         }
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+
+        }
     </style>
 </head>
 
 <body>
+    <video autoplay muted loop class="bg-video">
+        <source src="{{ asset('bg/bg.mp4') }}" type="video/mp4">
+    </video>
     <div class="container">
         <div class="form-container">
             <h2 class="text-center mb-4">Upload Kost</h2>

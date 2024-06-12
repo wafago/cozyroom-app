@@ -43,26 +43,33 @@
 <body>
     <div class="container">
         <div class="profile-container">
-            <div class="profile-header">
-                <h2>Profile</h2>
-                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid">
-                <h4>{{ Auth::user()->name }}</h4>
-                <p>{{ Auth::user()->email }}</p>
-            </div>
-            <div class="profile-info">
-                <h5>Informasi Profil</h5>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Nama</label>
-                        <input type="text" class="form-control" id="name" value="{{ Auth::user()->name }}" readonly>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" value="{{ Auth::user()->email }}" readonly>
-                    </div>
-                    <a href="{{ route('logout') }}" class="btn btn-danger btn-block">Logout</a>
-                </form>
-            </div>
+            @if (Auth::check())
+                <div class="profile-header">
+                    <h2>Profile</h2>
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="img-fluid">
+                    <h4>{{ Auth::user()->name }}</h4>
+                    <p>{{ Auth::user()->email }}</p>
+                </div>
+                <div class="profile-info">
+                    <h5>Informasi Profil</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" class="form-control" id="name" value="{{ Auth::user()->name }}" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" value="{{ Auth::user()->email }}" readonly>
+                        </div>
+                        <a href="{{ route('logout') }}" class="btn btn-danger btn-block">Logout</a>
+                    </form>
+                </div>
+            @else
+                <div class="text-center">
+                    <h2>Anda belum login</h2>
+                    <a href="{{ route('login') }}" class="btn btn-primary">Login</a>
+                </div>
+            @endif
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

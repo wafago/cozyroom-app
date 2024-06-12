@@ -48,6 +48,6 @@ Route::get('/search', 'SearchController@search')->name('search');
     Route::post('/owner/upload-kost', [OwnerController::class, 'uploadKost'])->name('owner.uploadKost');
 // });
 
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
-});
+// });

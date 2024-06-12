@@ -7,12 +7,19 @@
     <title>Register Pemilik Kost</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            background-color: #f4F4F4;
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
         }
 
         .container {
-            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            z-index: 1;
         }
 
         .form-container {
@@ -21,6 +28,12 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+            margin-bottom: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            display: ruby-base-container;
+
         }
 
         .form-group label {
@@ -28,7 +41,6 @@
         }
 
         .custom-image {
-
             border-radius: px;
         }
 
@@ -41,25 +53,12 @@
             background-color: #5a6268;
             border: none;
         }
-
-        .bg-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
     </style>
 </head>
 
 <body>
-    <image class="bg-image">
-        <source src="{{ asset('bg/regis-img.jpg') }}" type="image">
-    </image>
-    <div class="container h-100 d-flex">
-        <div class="form-container">
+    <div class="container">
+        <div class="form-container ">
             <h2 class="text-center mb-4">Daftar Sebagai Owner</h2>
             <form action="{{ route('register.owner') }}" method="POST">
                 @csrf
@@ -85,9 +84,7 @@
                     <a href="{{ route('login') }}" class="btn btn-link">Sudah punya akun?</a>
                 </div>
             </form>
-
         </div>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

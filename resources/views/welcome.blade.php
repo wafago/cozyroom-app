@@ -21,15 +21,11 @@
     <title>CozyRoom</title>
 
     <style>
-        /* Navbar */
  
-
-      
-
         .hero-tagline {
             text-align: left;
-            padding-top: 100px;
-            padding-bottom: 50px;
+            padding-top: 50px;
+            padding-bottom: 20px;
         }
 
         .hero-tagline h1 {
@@ -82,30 +78,18 @@
         }
 
         .custom-image {
-            width: 400px;
-            height: 400px;
-            border-radius: 72px;
+            width: 600px;
+            height: 500px;
+            border-radius: 0px;
         }
+
+       
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">CozyRoom</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-        </div>
-    </nav> -->
-
-    <!-- Hero Section -->
     <section id="hero">
-        <div class="container h-100 text-align center d-flex">
+        <div class="custom-con container h-150 text-align center d-flex">
             <div class="row h-100">
                 <div class="col-md-6 hero-tagline my-auto">
                     <h1>Membantu <span class="highlight-yellow">Menemukan Kost</span> Terbaik untuk Kamu</h1>
@@ -113,16 +97,16 @@
                         sementara
                         atau tempat menginap terbaik yang sesuai dengan kebutuhan dan keinginan Kamu</p>
                 </div>
-                <div class="col-md-6 hero-tagline my-auto">
-                    <img src="{{asset('bg/welcome.jpg')}}" class="custom-image">
+
+                <div class="col-md-6 hero-tagline my-auto text-align center">
+                    <img src="{{asset('bg/home-bg.png')}}" class="custom-image">
                 </div>
                 <div class="d-flex">
                     <button class="btn btn-primary me-2" onclick="location.href='{{route('search')}}'">Temukan
                         Kost</button>
                     <button class="btn btn-primary me-2"
                         onclick="location.href='{{route('register.owner')}}'">Owner</button>
-                    <!-- <button class="btn btn-primary me-2"
-                        onclick="location.href='{{route('register.user')}}'">Pengguna</button> -->
+                    
                 </div>
             </div>
 

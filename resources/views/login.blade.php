@@ -43,9 +43,9 @@
         }
 
         .btn-primary {
-            background-color: #007bff;
+            background-color: #ffc107;
             /* Change button color */
-            border-color: #007bff;
+            border: none;
         }
     </style>
 </head>

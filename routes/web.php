@@ -33,6 +33,9 @@ Route::get('/register-owner', function () {
 Route::get('/register-user', function () {
     return view('register-user');
 });
+Route::get('/homepage', function () {
+    return view('homepage');
+});
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
